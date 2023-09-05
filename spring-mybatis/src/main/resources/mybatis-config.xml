@@ -18,7 +18,7 @@
 
   <!--### 这里如果不注册会发生 org.apache.ibatis.binding.BindingException: Type interface org.example.mapper.UserMapper is not known to the MapperRegistry.-->
 
-  <mappers>
-    <mapper class="org.example.mapper.UserMapper"/>
-  </mappers>
+<!--  <mappers>-->
+<!--    <mapper class="org.example.mapper.UserMapper"/>-->
+<!--  </mappers>-->
 </configuration>

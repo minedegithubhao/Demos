@@ -67,6 +67,13 @@
             <artifactId>lombok</artifactId>
             <version>1.18.28</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.2.220</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <!--### Maven静态资源过滤问题 Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.ClassNotFoundException: Cannot find class: org/example/mapper/UserMapper-->

@@ -1,3 +1,4 @@
+import org.example.DbUtils;
 import org.example.mapper.UserMapper;
 import org.example.pojo.User;
 import org.junit.Test;
@@ -18,13 +19,14 @@ public class MyTest {
 //
 //        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
 //        List<User> users = mapper.selectUsers();
+
+        //造数据
+        DbUtils.generateData();
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserMapper userMapper = context.getBean("userMapper" ,UserMapper.class);
         List<User> users = userMapper.selectUsers();
         for (User user : users) {
             System.out.println(user);
         }
-
-
     }
 }
