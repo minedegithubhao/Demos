@@ -5,6 +5,6 @@
 <mapper namespace="org.example.mapper.BlogInfoMapper">
 
     <select id="selectAll" resultType="org.example.entity.BlogInfo">
-        select * from canbe_blog.blog_info
+        select * from person
     </select>
 </mapper>

@@ -6,7 +6,7 @@ public class DbUtils {
 
     /**h2数据库链接信息*/
     public static final String DB_DRIVER = "org.h2.Driver";
-    public static final String DB_URL = "jdbc:h2:file:./db/test";
+    public static final String DB_URL = "jdbc:h2:file:../db/test";
     public static final String DB_USERNAME = "sa";
     public static final String DB_PASSWORD = "";
     /**建表语句*/
