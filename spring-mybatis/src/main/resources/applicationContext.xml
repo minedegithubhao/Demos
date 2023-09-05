@@ -12,10 +12,4 @@
     <bean id="userMapper" class="org.example.mapper.impl.UserMapperImpl">
         <property name="sqlSession" ref="sqlSession"/>
     </bean>
-    <bean id="dbUtils" class="org.example.utils.DbUtils">
-        <property name="DB_DRIVER" value="${DB_DRIVER}"/>
-        <property name="DB_URL" value="${DB_URL}"/>
-        <property name="DB_USERNAME" value="${DB_USERNAME}"/>
-        <property name="DB_PASSWORD" value="${DB_PASSWORD}"/>
-    </bean>
 </beans>
