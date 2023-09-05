@@ -10,6 +10,13 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-Profiles</module>
+        <module>spring-di-01</module>
+        <module>spring-di-02</module>
+        <module>spring-di-03</module>
+        <module>myProxyDemo</module>
+        <module>spring-mybatis</module>
+        <module>spring-transcation</module>
+        <module>aopDemo</module>
     </modules>
 
     <properties>

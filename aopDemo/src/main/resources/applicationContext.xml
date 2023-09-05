@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+		https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <bean id="mylog" class="org.example.log.myLog"/>
+    <bean id="afterLog" class="org.example.log.AfterLog"/>
+    <bean id="userService" class="org.example.service.impl.UserServiceImpl"/>
+
+    <!--方式三 使用注解的方式-->
+    <bean id="annotationAopDemo" class="org.example.annotationAopDemo.AnnotationAopDemo"/>
+    <aop:aspectj-autoproxy/>
+
+    <!--方式一-->
+    <!--<aop:config>
+        <aop:pointcut id="pointcut" expression="execution(* org.example.service.impl.UserServiceImpl.*(..))"/>
+        <aop:advisor advice-ref="mylog" pointcut-ref="pointcut"/>
+        <aop:advisor advice-ref="afterLog" pointcut-ref="pointcut"/>
+    </aop:config>-->
+
+    <!--方式二-->
+    <!--<bean id="myPointCut" class="org.example.diy.myPointCut"/>
+    <aop:config>
+        &lt;!&ndash;自定义切面，也就是类myPointCut&ndash;&gt;
+        <aop:aspect ref="myPointCut">
+            &lt;!&ndash;切入点 要进行增强的方法&ndash;&gt;
+            <aop:pointcut id="pointCut" expression="execution(* org.example.service.impl.UserServiceImpl.*(..))"/>
+            &lt;!&ndash;通知&ndash;&gt;
+            <aop:before method="before" pointcut-ref="pointCut"/>
+            <aop:after method="after" pointcut-ref="pointCut"/>
+        </aop:aspect>
+    </aop:config>-->
+</beans>
