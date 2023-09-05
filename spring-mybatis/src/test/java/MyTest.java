@@ -1,4 +1,4 @@
-import org.example.DbUtils;
+import org.example.utils.DbUtils;
 import org.example.mapper.UserMapper;
 import org.example.pojo.User;
 import org.junit.Test;
