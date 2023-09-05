@@ -9,6 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class MyTest {
 
+    //-Dspring.profiles.active=dev多环境配置的一种
     @Test
     public void test(){
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
