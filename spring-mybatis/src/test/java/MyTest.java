@@ -23,7 +23,7 @@ public class MyTest {
 //        List<User> users = mapper.selectUsers();
 
         //造数据
-        DbUtils.generateData();
+//        DbUtils.generateData();
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserMapper userMapper = context.getBean("userMapper" ,UserMapper.class);
         List<User> users = userMapper.selectUsers();

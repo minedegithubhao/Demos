@@ -17,6 +17,7 @@
         <module>spring-mybatis</module>
         <module>spring-transcation</module>
         <module>aopDemo</module>
+        <module>rabbitmqDemo</module>
     </modules>
 
     <properties>
