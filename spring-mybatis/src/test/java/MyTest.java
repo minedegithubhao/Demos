@@ -1,5 +1,6 @@
 import lombok.Getter;
 import lombok.Setter;
+import org.apache.mina.transport.socket.nio.NioSocketConnector;
 import org.example.utils.DbUtils;
 import org.example.mapper.UserMapper;
 import org.example.pojo.User;

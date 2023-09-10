@@ -75,6 +75,11 @@
             <version>2.2.220</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.mina</groupId>
+            <artifactId>mina-core</artifactId>
+            <version>2.0.0-RC1</version>
+        </dependency>
     </dependencies>
 
     <!--### Maven静态资源过滤问题 Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.ClassNotFoundException: Cannot find class: org/example/mapper/UserMapper-->
