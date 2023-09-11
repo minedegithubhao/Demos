@@ -18,6 +18,7 @@
         <module>spring-transcation</module>
         <module>aopDemo</module>
         <module>rabbitmqDemo</module>
+        <module>java-nio</module>
     </modules>
 
     <properties>

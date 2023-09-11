@@ -10,6 +10,7 @@
         <module name="spring-transcation" />
         <module name="aopDemo" />
         <module name="myProxyDemo" />
+        <module name="java-nio" />
         <module name="spring-di-01" />
         <module name="spring-di-02" />
         <module name="spring-di-03" />
