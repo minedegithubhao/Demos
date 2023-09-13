@@ -1,7 +1,6 @@
 package org.example.demo02;
 
 import org.apache.commons.io.FileUtils;
-import org.example.demo01.TestThread2;
 
 import java.io.File;
 import java.io.IOException;
