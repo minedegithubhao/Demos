@@ -21,6 +21,7 @@
         <module>java-nio</module>
         <module>java-current</module>
         <module>MyProxyDemo-Static</module>
+        <module>lambdaShow</module>
     </modules>
 
     <properties>

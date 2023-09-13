@@ -7,18 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="java-current" />
         <module name="spring-transcation" />
-        <module name="aopDemo" />
         <module name="myProxyDemo" />
         <module name="java-nio" />
         <module name="spring-di-01" />
         <module name="spring-di-02" />
-        <module name="MyProxyDemo-Static" />
         <module name="spring-di-03" />
-        <module name="rabbitmqDemo" />
+        <module name="lambdaShow" />
         <module name="spring-Profiles" />
         <module name="spring-mybatis" />
+        <module name="java-current" />
+        <module name="aopDemo" />
+        <module name="MyProxyDemo-Static" />
+        <module name="rabbitmqDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
