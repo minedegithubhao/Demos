@@ -31,5 +31,8 @@ public class TestState {
             state = thread.getState();
             System.out.println(state);
         }
+
+        // 进入死亡状态，就不能再次启动
+        thread.start();
     }
 }
