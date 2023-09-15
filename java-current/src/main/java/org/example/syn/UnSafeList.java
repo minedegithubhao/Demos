@@ -4,16 +4,16 @@ import java.util.ArrayList;
 
 public class UnSafeList {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ArrayList arrayList = new ArrayList();
         for (int i = 0; i < 10000; i++) {
-            new Thread(() -> arrayList.add(Thread.currentThread().getName())).start();
+            new Thread(() -> {
+                synchronized (arrayList) {
+                    arrayList.add(Thread.currentThread().getName());
+                }
+            }).start();
         }
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        Thread.sleep(1000);
         System.out.println(arrayList.size());
     }
 }

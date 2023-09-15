@@ -42,18 +42,22 @@ class Drawing extends Thread {
     @SneakyThrows
     @Override
     public void run() {
-        Thread.sleep(100);
-        if (account.amount - drawingMoney < 0){
-            System.out.println(Thread.currentThread().getName() + "钱不够， 取不了");
-            return;
+
+        //synchronized锁共享资源才行
+        synchronized (account){
+            Thread.sleep(100);
+            if (account.amount - drawingMoney < 0){
+                System.out.println(Thread.currentThread().getName() + "钱不够， 取不了");
+                return;
+            }
+
+            // 卡内余额
+            account.amount = account.amount - drawingMoney;
+
+            nowMoney = nowMoney = drawingMoney;
+
+            System.out.println(account.name + "余额为：" + account.amount);
+            System.out.println(this.getName() + "手里的钱为：" + nowMoney);
         }
-
-        // 卡内余额
-        account.amount = account.amount - drawingMoney;
-
-        nowMoney = nowMoney = drawingMoney;
-
-        System.out.println(account.name + "余额为：" + account.amount);
-        System.out.println(this.getName() + "手里的钱为：" + nowMoney);
     }
 }

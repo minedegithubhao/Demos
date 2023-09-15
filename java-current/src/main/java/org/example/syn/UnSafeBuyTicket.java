@@ -27,7 +27,8 @@ class BuyTick implements Runnable {
         }
     }
 
-    private void buy() {
+    //synchronized 同步方法，锁的是this
+    private synchronized void buy() {
         if (ticketNum <= 0) {
             flag = false;
             return;
