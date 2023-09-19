@@ -24,6 +24,11 @@ public class TestIterator {
         //[1, 3, 4]
         System.out.println(list);
 
+        /*
+           在迭代过程中尝试移除元素，会导致 ConcurrentModificationException 异常，
+           但是由于JDK8开始修复了对于单线程中的迭代做了基于快照的升级，可以在多线程中模拟，会出现这个异常，
+           一般迭代时移除，我们建议采用iterator中的remove
+         */
         for (String string : list) {
             if ("3".equals(string)){
                 list.remove(string);
