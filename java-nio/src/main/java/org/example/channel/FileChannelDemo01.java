@@ -6,6 +6,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 /**
+ * file读操作
  * @author ASUS
  */
 public class FileChannelDemo01 {
@@ -19,7 +20,7 @@ public class FileChannelDemo01 {
         FileChannel channel = accessFile.getChannel();
         //step2 创建buffer
         ByteBuffer buffer = ByteBuffer.allocate(1024);
-        //step3 读取数据到buffer重
+        //step3 读取数据到buffer中
         int byteRead = channel.read(buffer);
 
         //byteRead = -1 说明读取完了数据
