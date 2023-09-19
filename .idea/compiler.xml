@@ -18,6 +18,7 @@
         <module name="spring-mybatis" />
         <module name="java-current" />
         <module name="aopDemo" />
+        <module name="iteratorDemo" />
         <module name="MyProxyDemo-Static" />
         <module name="rabbitmqDemo" />
       </profile>

@@ -22,6 +22,7 @@
         <module>java-current</module>
         <module>MyProxyDemo-Static</module>
         <module>lambdaShow</module>
+        <module>iteratorDemo</module>
     </modules>
 
     <properties>
