@@ -37,6 +37,7 @@ public class FileChannelDemo01 {
             buffer.clear();
             byteRead = channel.read(buffer);
         }
+        channel.close();
         accessFile.close();
         System.out.println("结束了");
     }
