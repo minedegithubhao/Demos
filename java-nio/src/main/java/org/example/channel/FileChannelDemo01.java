@@ -1,6 +1,5 @@
 package org.example.channel;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
@@ -16,7 +15,7 @@ public class FileChannelDemo01 {
     public static void main(String[] args) throws IOException {
 
         //step1 创建fileChannel
-        RandomAccessFile accessFile = new RandomAccessFile("./test.txt", "rw");
+        RandomAccessFile accessFile = new RandomAccessFile("test.txt", "rw");
         FileChannel channel = accessFile.getChannel();
         //step2 创建buffer
         ByteBuffer buffer = ByteBuffer.allocate(1024);
@@ -31,8 +30,13 @@ public class FileChannelDemo01 {
             buffer.flip();
             //buffer.hasRemaining()用来判断buffer中是否还有数据，如果有我们就进行读取操作
             while (buffer.hasRemaining()){
-
+                System.out.println((char) buffer.get());
             }
+            //清空buffer
+            buffer.clear();
+            byteRead = channel.read(buffer);
         }
+        accessFile.close();
+        System.out.println("结束了");
     }
 }
