@@ -48,7 +48,9 @@ public class ServerSocketChannelDemo {
 
                 //关闭channel
                 channel.close();
+                ssc.close();
             }
         }
+
     }
 }
